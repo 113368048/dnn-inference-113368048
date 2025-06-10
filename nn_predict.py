@@ -3,11 +3,14 @@ import json
 
 # === Activation functions ===
 def relu(x):
+    # ReLU: max(0, x)
     return np.maximum(0, x)
 
 def softmax(x):
-    # Numerically stable softmax
-    exps = np.exp(x - np.max(x, axis=1, keepdims=True))
+    # Softmax: exp(x - max) / sum(exp(x - max))
+    # 支援批次輸入，假設 x.shape = (batch_size, num_classes)
+    shiftx = x - np.max(x, axis=1, keepdims=True)  # 減最大值避免overflow
+    exps = np.exp(shiftx)
     return exps / np.sum(exps, axis=1, keepdims=True)
 
 # === Flatten ===
@@ -23,6 +26,7 @@ def dense(x, W, b):
 def nn_forward_h5(model_arch, weights, data):
     x = data
     for layer in model_arch:
+        lname = layer['name']
         ltype = layer['type']
         cfg = layer['config']
         wnames = layer['weights']
@@ -37,10 +41,10 @@ def nn_forward_h5(model_arch, weights, data):
                 x = relu(x)
             elif cfg.get("activation") == "softmax":
                 x = softmax(x)
+
     return x
 
-# Entry point
+
+# You are free to replace nn_forward_h5() with your own implementation 
 def nn_inference(model_arch, weights, data):
     return nn_forward_h5(model_arch, weights, data)
-
-    
