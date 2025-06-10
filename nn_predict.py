@@ -3,15 +3,22 @@ import json
 
 # === Activation functions ===
 def relu(x):
-    # ReLU: max(0, x)
+    # Rectified Linear Unit: max(0, x)
     return np.maximum(0, x)
 
 def softmax(x):
-    # Softmax: exp(x - max) / sum(exp(x - max))
-    # 支援批次輸入，假設 x.shape = (batch_size, num_classes)
-    shiftx = x - np.max(x, axis=1, keepdims=True)  # 減最大值避免overflow
-    exps = np.exp(shiftx)
-    return exps / np.sum(exps, axis=1, keepdims=True)
+    # Softmax with numerical stability
+    # x shape: (batch_size, num_classes) or (num_classes,)
+    # 支援batch輸入
+    if x.ndim == 1:
+        x = x - np.max(x)
+        exp_x = np.exp(x)
+        return exp_x / np.sum(exp_x)
+    else:
+        # batch mode
+        x = x - np.max(x, axis=1, keepdims=True)
+        exp_x = np.exp(x)
+        return exp_x / np.sum(exp_x, axis=1, keepdims=True)
 
 # === Flatten ===
 def flatten(x):
