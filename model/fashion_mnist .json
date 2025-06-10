@@ -1,9 +1,9 @@
 [
   {
-    "name": "dense_9",
+    "name": "dense_12",
     "type": "Dense",
     "config": {
-      "name": "dense_9",
+      "name": "dense_12",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -36,15 +36,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_9_0",
-      "dense_9_1"
+      "dense_12_0",
+      "dense_12_1"
     ]
   },
   {
-    "name": "batch_normalization",
+    "name": "batch_normalization_2",
     "type": "BatchNormalization",
     "config": {
-      "name": "batch_normalization",
+      "name": "batch_normalization_2",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -90,17 +90,17 @@
       "synchronized": false
     },
     "weights": [
-      "batch_normalization_0",
-      "batch_normalization_1",
-      "batch_normalization_2",
-      "batch_normalization_3"
+      "batch_normalization_2_0",
+      "batch_normalization_2_1",
+      "batch_normalization_2_2",
+      "batch_normalization_2_3"
     ]
   },
   {
-    "name": "activation",
+    "name": "activation_2",
     "type": "Activation",
     "config": {
-      "name": "activation",
+      "name": "activation_2",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -115,10 +115,10 @@
     "weights": []
   },
   {
-    "name": "dropout_2",
+    "name": "dropout_4",
     "type": "Dropout",
     "config": {
-      "name": "dropout_2",
+      "name": "dropout_4",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -135,10 +135,10 @@
     "weights": []
   },
   {
-    "name": "dense_10",
+    "name": "dense_13",
     "type": "Dense",
     "config": {
-      "name": "dense_10",
+      "name": "dense_13",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -171,15 +171,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_10_0",
-      "dense_10_1"
+      "dense_13_0",
+      "dense_13_1"
     ]
   },
   {
-    "name": "batch_normalization_1",
+    "name": "batch_normalization_3",
     "type": "BatchNormalization",
     "config": {
-      "name": "batch_normalization_1",
+      "name": "batch_normalization_3",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -225,17 +225,17 @@
       "synchronized": false
     },
     "weights": [
-      "batch_normalization_1_0",
-      "batch_normalization_1_1",
-      "batch_normalization_1_2",
-      "batch_normalization_1_3"
+      "batch_normalization_3_0",
+      "batch_normalization_3_1",
+      "batch_normalization_3_2",
+      "batch_normalization_3_3"
     ]
   },
   {
-    "name": "activation_1",
+    "name": "activation_3",
     "type": "Activation",
     "config": {
-      "name": "activation_1",
+      "name": "activation_3",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -250,10 +250,10 @@
     "weights": []
   },
   {
-    "name": "dropout_3",
+    "name": "dropout_5",
     "type": "Dropout",
     "config": {
-      "name": "dropout_3",
+      "name": "dropout_5",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -270,10 +270,10 @@
     "weights": []
   },
   {
-    "name": "dense_11",
+    "name": "dense_14",
     "type": "Dense",
     "config": {
-      "name": "dense_11",
+      "name": "dense_14",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -306,8 +306,8 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_11_0",
-      "dense_11_1"
+      "dense_14_0",
+      "dense_14_1"
     ]
   }
 ]
