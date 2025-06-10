@@ -1,9 +1,9 @@
 [
   {
-    "name": "dense_6",
+    "name": "dense_9",
     "type": "Dense",
     "config": {
-      "name": "dense_6",
+      "name": "dense_9",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -14,7 +14,7 @@
         "registered_name": null
       },
       "units": 256,
-      "activation": "relu",
+      "activation": "linear",
       "use_bias": true,
       "kernel_initializer": {
         "module": "keras.initializers",
@@ -36,15 +36,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_6_0",
-      "dense_6_1"
+      "dense_9_0",
+      "dense_9_1"
     ]
   },
   {
-    "name": "dropout",
-    "type": "Dropout",
+    "name": "batch_normalization",
+    "type": "BatchNormalization",
     "config": {
-      "name": "dropout",
+      "name": "batch_normalization",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -54,17 +54,91 @@
         },
         "registered_name": null
       },
-      "rate": 0.2,
+      "axis": -1,
+      "momentum": 0.99,
+      "epsilon": 0.001,
+      "center": true,
+      "scale": true,
+      "beta_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Zeros",
+        "config": {},
+        "registered_name": null
+      },
+      "gamma_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Ones",
+        "config": {},
+        "registered_name": null
+      },
+      "moving_mean_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Zeros",
+        "config": {},
+        "registered_name": null
+      },
+      "moving_variance_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Ones",
+        "config": {},
+        "registered_name": null
+      },
+      "beta_regularizer": null,
+      "gamma_regularizer": null,
+      "beta_constraint": null,
+      "gamma_constraint": null,
+      "synchronized": false
+    },
+    "weights": [
+      "batch_normalization_0",
+      "batch_normalization_1",
+      "batch_normalization_2",
+      "batch_normalization_3"
+    ]
+  },
+  {
+    "name": "activation",
+    "type": "Activation",
+    "config": {
+      "name": "activation",
+      "trainable": true,
+      "dtype": {
+        "module": "keras",
+        "class_name": "DTypePolicy",
+        "config": {
+          "name": "float32"
+        },
+        "registered_name": null
+      },
+      "activation": "relu"
+    },
+    "weights": []
+  },
+  {
+    "name": "dropout_2",
+    "type": "Dropout",
+    "config": {
+      "name": "dropout_2",
+      "trainable": true,
+      "dtype": {
+        "module": "keras",
+        "class_name": "DTypePolicy",
+        "config": {
+          "name": "float32"
+        },
+        "registered_name": null
+      },
+      "rate": 0.3,
       "seed": null,
       "noise_shape": null
     },
     "weights": []
   },
   {
-    "name": "dense_7",
+    "name": "dense_10",
     "type": "Dense",
     "config": {
-      "name": "dense_7",
+      "name": "dense_10",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -75,7 +149,7 @@
         "registered_name": null
       },
       "units": 128,
-      "activation": "relu",
+      "activation": "linear",
       "use_bias": true,
       "kernel_initializer": {
         "module": "keras.initializers",
@@ -97,15 +171,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_7_0",
-      "dense_7_1"
+      "dense_10_0",
+      "dense_10_1"
     ]
   },
   {
-    "name": "dropout_1",
-    "type": "Dropout",
+    "name": "batch_normalization_1",
+    "type": "BatchNormalization",
     "config": {
-      "name": "dropout_1",
+      "name": "batch_normalization_1",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -115,17 +189,91 @@
         },
         "registered_name": null
       },
-      "rate": 0.2,
+      "axis": -1,
+      "momentum": 0.99,
+      "epsilon": 0.001,
+      "center": true,
+      "scale": true,
+      "beta_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Zeros",
+        "config": {},
+        "registered_name": null
+      },
+      "gamma_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Ones",
+        "config": {},
+        "registered_name": null
+      },
+      "moving_mean_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Zeros",
+        "config": {},
+        "registered_name": null
+      },
+      "moving_variance_initializer": {
+        "module": "keras.initializers",
+        "class_name": "Ones",
+        "config": {},
+        "registered_name": null
+      },
+      "beta_regularizer": null,
+      "gamma_regularizer": null,
+      "beta_constraint": null,
+      "gamma_constraint": null,
+      "synchronized": false
+    },
+    "weights": [
+      "batch_normalization_1_0",
+      "batch_normalization_1_1",
+      "batch_normalization_1_2",
+      "batch_normalization_1_3"
+    ]
+  },
+  {
+    "name": "activation_1",
+    "type": "Activation",
+    "config": {
+      "name": "activation_1",
+      "trainable": true,
+      "dtype": {
+        "module": "keras",
+        "class_name": "DTypePolicy",
+        "config": {
+          "name": "float32"
+        },
+        "registered_name": null
+      },
+      "activation": "relu"
+    },
+    "weights": []
+  },
+  {
+    "name": "dropout_3",
+    "type": "Dropout",
+    "config": {
+      "name": "dropout_3",
+      "trainable": true,
+      "dtype": {
+        "module": "keras",
+        "class_name": "DTypePolicy",
+        "config": {
+          "name": "float32"
+        },
+        "registered_name": null
+      },
+      "rate": 0.3,
       "seed": null,
       "noise_shape": null
     },
     "weights": []
   },
   {
-    "name": "dense_8",
+    "name": "dense_11",
     "type": "Dense",
     "config": {
-      "name": "dense_8",
+      "name": "dense_11",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -158,8 +306,8 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_8_0",
-      "dense_8_1"
+      "dense_11_0",
+      "dense_11_1"
     ]
   }
 ]
